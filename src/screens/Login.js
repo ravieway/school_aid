@@ -1,32 +1,23 @@
 import React, { Component } from "react";
+import LoginForm from "../component/LoginForm";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
-import OwlCarousal from "../component/OwlCarousal";
-import HomeBody from "../component/HomeBody";
-
-class Home extends Component {
-
+class Login extends Component {
   render() {
     return (
       <div>
         <div>
           <Header />
         </div>
-
         <div>
-          <OwlCarousal />
-        </div>
-
-        <div>
-            <HomeBody />
+          <LoginForm />
         </div>
         <div>
           <Footer />
         </div>
-
       </div>
     );
   }
 }
 
-export default Home;
+export default Login;
