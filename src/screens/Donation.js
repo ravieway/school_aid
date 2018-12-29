@@ -36,7 +36,7 @@ class Donation extends Component {
           <Header />
         </div>
 
-        <div style={{paddingTop : 60}} >
+        <div style={{ paddingTop: 60 }}>
           {/* <DonateForm/> */}
           {/* <DonationInfoCard/> */}
           {this.renderdonationCards(dummyDonationData)}
@@ -46,7 +46,6 @@ class Donation extends Component {
         <div>
           <Footer />
         </div>
-
       </div>
     );
   }

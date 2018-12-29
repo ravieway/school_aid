@@ -110,7 +110,7 @@ class Header extends Component {
                       <a href="/SuccessStories">SUCCESS STORIES</a>
                     </li>
                     <li>
-                      <a href="/ContactUs">CONTACT US</a>
+                      <a href="/Contact">CONTACT US</a>
                     </li>
                   </ul>
                 </div>

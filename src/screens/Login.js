@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LoginForm from "../component/LoginForm";
+import AddUser from "../component/AddUser";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 class Login extends Component {
@@ -10,7 +10,7 @@ class Login extends Component {
           <Header />
         </div>
         <div>
-          <LoginForm />
+          <AddUser />
         </div>
         <div>
           <Footer />

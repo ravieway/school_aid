@@ -24,7 +24,7 @@ class HomeBody extends Component {
                         <p>Identify potential donor assistance to improve facilities of underdeveloped schools in Sri Lanka</p>
                         
                       </div>
-                      <a href="#" class="btn btn-primary"> Read more </a>
+                      <a href="/About" class="btn btn-primary"> Read more </a>
                   
                 </div>
                 
@@ -64,7 +64,7 @@ class HomeBody extends Component {
                         <p>Real stories from the schools we serve and the corporations who make our work possible.</p>
                         
                       </div>
-                      <a href="#" class="btn btn-primary"> Read more </a>
+                      <a href="/SuccessStories" class="btn btn-primary"> Read more </a>
                   
                 </div>
                 
@@ -84,7 +84,7 @@ class HomeBody extends Component {
                         <p>Feed us with your valueble ideas and ways you can support us</p>
                         
                       </div>
-                      <a href="#" class="btn btn-primary"> Contact Us </a>
+                      <a href="/Contact" class="btn btn-primary"> Contact Us </a>
                   
                 </div>
                 
