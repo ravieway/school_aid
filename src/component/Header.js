@@ -79,7 +79,7 @@ class Header extends Component {
                     <span className="icon-bar" />
                   </button>
 
-                  <a className="navbar-brand" href="index.html">
+                  <a className="navbar-brand" href="/">
                     <img src="assets/images/skoolaid-logo.png" alt="" />
                   </a>
                 </div>
@@ -90,27 +90,27 @@ class Header extends Component {
                 >
                   <ul className="nav navbar-nav">
                     <li>
-                      <a className="is-active" routerlink="home">
+                      <a className="is-active" routerlink="/">
                         HOME
                       </a>
                     </li>
                     <li>
-                      <a href="about.html">ABOUT</a>
+                      <a href="/About">ABOUT</a>
                     </li>
                     <li className="has-child">
                       <a routerlink="causes">CAUSES</a>
 
                       <ul className="submenu">
                         <li className="submenu-item">
-                          <a href="causes.html">Causes list </a>
+                          <a href="/Donation">Causes list </a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a href="gallery.html">SUCCESS STORIES</a>
+                      <a href="/SuccessStories">SUCCESS STORIES</a>
                     </li>
                     <li>
-                      <a href="contact.html">CONTACT</a>
+                      <a href="/ContactUs">CONTACT US</a>
                     </li>
                   </ul>
                 </div>
