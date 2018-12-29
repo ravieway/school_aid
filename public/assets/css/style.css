@@ -57,7 +57,7 @@ a:hover, a:focus, a:active {
   color: #fff;
   background:linear-gradient(160deg, #000000 -25%, #2e506a 50%, #499ae0 125%);
 }
-}
+
 .navbar-main .navbar-brand {
   border-bottom: none !important;
 }
@@ -1046,7 +1046,7 @@ form .alert {
 
 form label, form input {
   display: block;
-  //margin-bottom: 10px;
+  margin-bottom: 10px;
   width: 90%
 }
 
@@ -1072,4 +1072,38 @@ form input {
 .sucessMsg {
   color: #6B8E23;
   margin-bottom: 10px;
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color:#fff;
+  background-color: #428bca;
+}
+
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 105px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
 }

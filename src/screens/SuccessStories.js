@@ -10,7 +10,16 @@ class SuccessStories extends Component {
         <div>
           <Header />
         </div>
-        <div style={{paddingTop : 60}} >
+
+        <div className="page-heading text-center">
+          <div className="container zoomIn animated">
+            <h1 className="page-title">
+              SuccessStories <span className="title-under" />
+            </h1>
+          </div>
+        </div>
+
+        <div >
           <SuccessGallery />
         </div>
         <div>
