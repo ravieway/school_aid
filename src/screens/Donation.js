@@ -58,7 +58,7 @@ class Donation extends Component {
         </div>
         <div>.</div>
 
-        <div>
+        <div style={{paddingTop:1000}}>
           <Footer />
         </div>
       </div>

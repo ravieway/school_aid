@@ -19,7 +19,7 @@ class CauseCard extends Component {
                         <td style={{width:95}}>{this.props.causeCode}</td>
                         <td style={{width:250}}>{this.props.title}</td>
                         <td style={{width:280}}>{this.props.school}</td>
-                        <td style={{width:75}}>{this.props.district}</td>
+                        <td style={{width:120}}>{this.props.district}</td>
                         <td style={{width:205}}>{this.props.province}</td>
                         <td >
                         {/* <input type="submit" value="Edit"/> */}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "../component/Header";
 import CauseTable from "../component/CauseTable";
+import DonorReqTable from "../component/DonorReqTable";
 import AddCauses from "../component/AddCauses";
 import { USER_LIST, GET_CAUSES } from "../constants";
 import Axios from "axios";
@@ -74,7 +75,6 @@ class MemberPanel extends Component {
                 <h1 className="page-header">Member Dashboard</h1>
 
                 {this.renderBoards(this.state.active)}
- 
               </div>
             </div>
           </div>
