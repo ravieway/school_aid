@@ -26,7 +26,7 @@ class Donation extends Component {
           image={ele.image}
           total={ele.total}
           current={ele.money}
-          name={ele.name}
+          title={ele.title}
           school={ele.schoolName}
           district={ele.district}
           province={ele.province}

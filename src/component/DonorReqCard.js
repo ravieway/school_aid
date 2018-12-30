@@ -14,7 +14,7 @@ class DonorReqCard extends Component {
                         <td style={{width:250}}>Elon Musk</td>
                         <td style={{width:175}}>932127423V</td>
                         <td style={{width:120}}>2000</td>
-                        <td >I would like to dance in school</td>
+                        <td >I would like to donate more</td>
                       </tr>
                     </tbody>
                   </table>  

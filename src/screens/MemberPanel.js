@@ -74,7 +74,7 @@ class MemberPanel extends Component {
               <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 className="page-header">Member Dashboard</h1>
 
-                {this.renderBoards(this.state.active)}
+                <DonorReqTable/>
               </div>
             </div>
           </div>

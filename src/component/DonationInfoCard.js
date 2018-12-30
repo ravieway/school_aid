@@ -23,7 +23,7 @@ class DonationInfoCard extends Component{
       
                       <h4 className="cause-title"><a href="#">{this.props.name}</a></h4>
                       <div className="cause-details">
-                        <br/>Amount: Rs.{this.props.total}<br/>{this.props.school}<br/>{this.props.district}<br/>{this.props.province}<br/>Cause code:{this.props.causeCode}
+                        <br/><h5>{this.props.title}</h5><br/>Amount: Rs.{this.props.total}<br/>{this.props.school}<br/>{this.props.district}<br/>{this.props.province}<br/>Cause code:{this.props.causeCode}
                       </div>
       
                       <div className="btn-holder text-center">
