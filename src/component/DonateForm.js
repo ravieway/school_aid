@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import {withRouter} from "react-router-dom";
+import Axios from "axios";
+import { DONATE } from "../constants";
 
 class DonateForm extends Component {
 
@@ -16,6 +19,11 @@ class DonateForm extends Component {
         }
     }
 
+    componentDidMount(){
+      let routes = this.props.location.pathname.split("/");
+      this.setState({causeId: routes[routes.length-1]})
+    }
+
     onChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -25,8 +33,15 @@ class DonateForm extends Component {
 
     onClick = (event) => {
         event.preventDefault();
+        if(parseInt(this.state.amount)){
+          let a = this.state;
 
-        console.log(this.state)
+          a.amount = parseInt(this.state.amount);
+
+          Axios.post(DONATE, a).then(res => {
+            this.props.history.push("/Donation");
+          });
+        }
     }
 
   render() {
@@ -40,7 +55,7 @@ class DonateForm extends Component {
           <div className="row">
             <div className="form-group col-md-12 ">
               <input
-                onChange={e=> {this.onChange(e)}}
+                // onChange={e=> {this.onChange(e)}}
                 name = "causeId"
                 value = {this.state.causeId}
                 type="text"
@@ -158,4 +173,4 @@ class DonateForm extends Component {
   }
 }
 
-export default DonateForm;
+export default withRouter(DonateForm);

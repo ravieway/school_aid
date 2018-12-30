@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <div>
         <div>
-          <Header />
+          <Header active="home"/>
         </div>
 
         <div className="mod">

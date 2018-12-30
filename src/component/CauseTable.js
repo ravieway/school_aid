@@ -4,6 +4,20 @@ import AddCauses from "../component/AddCauses";
 
 
 class CauseTable extends Component {
+    renderCauses = data => {
+      return data.map(ele => {
+        return <CauseCard
+          key={ele._id}
+          id={ele._id}
+          causeCode={ele.causeId}
+          title={ele.title}
+          school={ele.schoolName}
+          district={ele.district}
+          province={ele.province}
+        />
+      })
+    }
+
     render() {
       return (
         <div>
@@ -17,11 +31,11 @@ class CauseTable extends Component {
                         <th style={{width:120}}>District</th>
                         <th>Province</th>
                         <th style={{width:200}}></th>
-
                       </tr>
                     </thead>
+                    
                   </table>
-                  <CauseCard/>
+                  {this.renderCauses(this.props.causes)}
                 </div>
         </div>
       );

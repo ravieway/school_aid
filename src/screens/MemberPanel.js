@@ -1,10 +1,43 @@
 import React, { Component } from "react";
 import Header from "../component/Header";
 import CauseTable from "../component/CauseTable";
-import MemberTable from "../component/MemberTable";
 import AddCauses from "../component/AddCauses";
+import { USER_LIST, GET_CAUSES } from "../constants";
+import Axios from "axios";
 
 class MemberPanel extends Component {
+  constructor(props){
+    super(props);
+
+    this.state ={
+      active: "view_causes",
+      users: [],
+      causes: []
+    }
+  }
+
+  componentWillMount(){
+    Axios.post(USER_LIST, {userName: localStorage.getItem("userName"), password: localStorage.getItem("password"), type: localStorage.getItem("type")}).then(res => {
+      this.setState({
+        users: res.data
+      })
+    })
+
+    Axios.post(GET_CAUSES, {userName: localStorage.getItem("userName"), password: localStorage.getItem("password"), type: localStorage.getItem("type")}).then(res => {
+      this.setState({
+        causes: res.data
+      })
+    })
+  }
+
+  renderBoards = () => {
+    if(this.state.active === "view_causes"){
+      return <CauseTable causes={this.state.causes}/>
+    }else if(this.state.active === "add_causes"){
+      return <AddCauses/>
+    }
+  }
+
   render() {
     return (
       <div>

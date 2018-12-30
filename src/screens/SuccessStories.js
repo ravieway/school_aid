@@ -8,7 +8,7 @@ class SuccessStories extends Component {
     return (
       <div>
         <div>
-          <Header />
+          <Header active="success"/>
         </div>
 
         <div className="page-heading text-center">

@@ -3,6 +3,16 @@ import MemberCard from "../component/MemberCard";
 
 
 class MemberTable extends Component {
+    renderUserCards = (data) => {
+      return data.map(ele => {
+        return(
+          <div key={ele._id}>
+            <MemberCard id={ele._id} userName={ele.userName} password={ele.password} email={ele.email}/>
+          </div>
+        )
+      })
+    }
+
     render() {
       return (
         <div>
@@ -18,7 +28,7 @@ class MemberTable extends Component {
                       </tr>
                     </thead>
                   </table>
-                  <MemberCard/>
+                  {this.renderUserCards(this.props.users)}
                 </div>
         </div>
       );

@@ -6,40 +6,55 @@ import Footer from "../component/Footer";
 import DonationInfoCard from "../component/DonationInfoCard";
 import { dummyDonationData } from "../dummy_data/DonationData";
 import SendImage from "../component/SendImage";
+import Axios from "axios";
+import { GET_CAUSES } from "../constants";
 class Donation extends Component {
-  onH1Click = () => {
-    this.props.history.push("/");
-  };
+  constructor(props){
+    super(props);
+
+    this.state = {
+      causes: []
+    }
+  }
 
   renderdonationCards = data => {
     return data.map(ele => {
       return (
         <DonationInfoCard
-          key={ele.causeCode}
+          key={ele._id}
+          id={ele._id}
           image={ele.image}
           total={ele.total}
-          current={ele.current}
+          current={ele.money}
           name={ele.name}
-          school={ele.school}
+          school={ele.schoolName}
           district={ele.district}
           province={ele.province}
-          causeCode={ele.causeCode}
+          causeCode={ele.causeId}
         />
       );
     });
   };
 
+  componentWillMount(){
+    Axios.post(GET_CAUSES, {userName: localStorage.getItem("userName"), password: localStorage.getItem("password"), type: localStorage.getItem("type")}).then(res => {
+      this.setState({
+        causes: res.data
+      })
+    })
+  }
+
   render() {
     return (
       <div>
         <div>
-          <Header />
+          <Header active="causes"/>
         </div>
 
         <div style={{ paddingTop: 60 }}>
           {/* <DonateForm/> */}
           {/* <DonationInfoCard/> */}
-          {this.renderdonationCards(dummyDonationData)}
+          {this.renderdonationCards(this.state.causes)}
         </div>
         <div>.</div>
 

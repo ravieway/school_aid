@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 
 class Header extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      userName: localStorage.getItem("userName") || "",
+      password: localStorage.getItem("password") || "",
+      type: localStorage.getItem("type") || ""
+    }
+  }
+
   render() {
     return (
       <div>
@@ -26,7 +37,7 @@ class Header extends Component {
 
                   <div className="col-sm-6 col-xs-12 text-right">
                     <ul className="list-unstyled list-inline header-social">
-                    <li>
+                    {this.state.type === "admin" ? (<li>
                         {" "}
                         <a href="/AdminPanel">
                           {" "}
@@ -34,8 +45,8 @@ class Header extends Component {
                             <h6>Admin Panel</h6>
                           </div>{" "}
                         </a>{" "}
-                      </li>
-                      <li>
+                      </li>) : <span/>}
+                      {(this.state.type === "member") ? (<li>
                         {" "}
                         <a href="/MemberPanel">
                           {" "}
@@ -43,13 +54,13 @@ class Header extends Component {
                             <h6>Member Panel</h6>
                           </div>{" "}
                         </a>{" "}
-                      </li>
+                      </li>) : <span/>}
                       <li>
                         {" "}
                         <a href="/Login">
                           {" "}
                           <div>
-                            <h6>Log in</h6>
+                            <h6>{this.state.userName === "" ? "Log in" : <span onClick={() => {localStorage.removeItem("userName"); localStorage.removeItem("password"); localStorage.removeItem("type")}}>Log Out</span>}</h6>
                           </div>{" "}
                         </a>{" "}
                       </li>
@@ -108,27 +119,21 @@ class Header extends Component {
                 >
                   <ul className="nav navbar-nav">
                     <li>
-                      <a className="is-active" routerlink="/">
+                      <a className={this.props.active === "home" ? "is-active": ""} href="/">
                         HOME
                       </a>
                     </li>
                     <li>
-                      <a href="/About">ABOUT</a>
-                    </li>
-                    <li className="has-child">
-                      <a routerlink="causes">CAUSES</a>
-
-                      <ul className="submenu">
-                        <li className="submenu-item">
-                          <a href="/Donation">Causes list </a>
-                        </li>
-                      </ul>
+                      <a className={this.props.active === "about" ? "is-active": ""} href="/About">ABOUT</a>
                     </li>
                     <li>
-                      <a href="/SuccessStories">SUCCESS STORIES</a>
+                      <a className={this.props.active === "causes" ? "is-active": ""} href="/Donation">CAUSES</a>
                     </li>
                     <li>
-                      <a href="/Contact">CONTACT US</a>
+                      <a className={this.props.active === "success" ? "is-active": ""} href="/SuccessStories">SUCCESS STORIES</a>
+                    </li>
+                    <li>
+                      <a className={this.props.active === "contact" ? "is-active": ""} href="/Contact">CONTACT US</a>
                     </li>
                   </ul>
                 </div>

@@ -7,7 +7,7 @@ class Contact extends Component {
     return (
       <div>
         <div>
-          <Header />
+          <Header active="contact"/>
         </div>
 
 	<div class="page-heading text-center">

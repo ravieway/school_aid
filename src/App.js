@@ -8,6 +8,7 @@ import Login from "./screens/Login"
 import SuccessStories from "./screens/SuccessStories"
 import Contact from "./screens/Contact"
 import {Switch, Route} from "react-router-dom";
+import DonateScreen from './screens/DonateScreen';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path="/Login" component={Login}/>
           <Route path="/successstories" component={SuccessStories}/>
           <Route path="/contact" component={Contact}/>
+          <Route path="/donate/:id" component={DonateScreen}/>
         </Switch>
       </div>
     );

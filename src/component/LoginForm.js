@@ -31,7 +31,16 @@ class LoginForm extends Component {
         e.preventDefault();
         if (this.validateForm()) {
           Axios.post(LOGIN_API, this.state.fields).then(res => {
-            console.log(res.body);
+            let data = res.data;
+            if(data.err){
+
+            }else{
+              localStorage.setItem("userName", data.userName);
+              localStorage.setItem("password", data.password);
+              localStorage.setItem("type", data.type);
+
+              this.props.history.push("/")
+            }
           }).catch(err => {
             console.log(err)
           });
@@ -122,4 +131,4 @@ class LoginForm extends Component {
     }
 }   
 
-export default LoginForm;
+export default withRouter(LoginForm);

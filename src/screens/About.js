@@ -7,7 +7,7 @@ class About extends Component {
     return (
       <div>
         <div>
-          <Header />
+          <Header active="about"/>
         </div>
 
         <div className="page-heading text-center">

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import SendImage from "./SendImage";
+import Axios from "axios";
+import { ADD_CAUSE } from "../constants";
 
 class AddCauses extends Component {
 
@@ -12,7 +14,8 @@ class AddCauses extends Component {
             province: "",
             district: "",
             image: "",
-            additionalNote: ""
+            additionalNote: "",
+            total: ""
         }
     }
 
@@ -21,12 +24,21 @@ class AddCauses extends Component {
             [e.target.name]: e.target.value
         })
     }
+
+    getImage = (data) => {
+      this.setState({
+        image: data
+      })
+    }
  
 
     onClick = (event) => {
         event.preventDefault();
-
-        console.log(this.state)
+        let a = this.state;
+        a.total = parseInt(this.state.total);
+        Axios.post(ADD_CAUSE, this.state).then(res => {
+          window.location.reload();
+        });
     }
 
   render() {
@@ -102,10 +114,23 @@ class AddCauses extends Component {
             </div>
           </div>
 
+          <div className="row">
+            <div className="form-group col-md-6">
+              <input
+              onChange={e=> {this.onChange(e)}}
+              name = "total"
+              value = {this.state.total}
+                type="text"
+                className="form-control"
+                placeholder="Total Required*"
+              />
+            </div>
+          </div>
+
 
           <div className="row" style={{paddingLeft : 15, paddingBottom : 15}}>
           <div className="form-group col-md-12 boxborder"  >
-            Add Image <SendImage/>
+            Add Image <br/> <SendImage getImage={(data) => this.getImage(data)}/>
             </div>
           </div>
 
@@ -123,6 +148,7 @@ class AddCauses extends Component {
               
               />
             </div>
+            
 
           </div>
 

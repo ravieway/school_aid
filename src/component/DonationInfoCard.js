@@ -1,6 +1,12 @@
 import React, {Component} from "react";
+import {withRouter} from "react-router-dom";
 
 class DonationInfoCard extends Component{
+
+    onClick = () => {
+      this.props.history.push("/donate/" + this.props.id)
+    }
+
     render(){
         return(
             <div className="col-md-3 col-sm-6">
@@ -22,7 +28,7 @@ class DonationInfoCard extends Component{
       
                       <div className="btn-holder text-center">
       
-                        <a href="#" className="btn btn-primary" data-toggle="modal" data-target="#donateModal"> DONATE NOW</a>
+                        <a onClick={this.onClick} className="btn btn-primary" data-toggle="modal"> DONATE NOW</a>
                         
                       </div>
                   </div>
@@ -31,4 +37,4 @@ class DonationInfoCard extends Component{
     }
 }
 
-export default DonationInfoCard;
+export default withRouter(DonationInfoCard);
