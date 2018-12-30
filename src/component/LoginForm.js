@@ -32,12 +32,13 @@ class LoginForm extends Component {
         if (this.validateForm()) {
           Axios.post(LOGIN_API, this.state.fields).then(res => {
             let data = res.data;
+            console.log(data);
             if(data.err){
 
             }else{
-              localStorage.setItem("userName", data.userName);
-              localStorage.setItem("password", data.password);
-              localStorage.setItem("type", data.type);
+              localStorage.setItem("userName", data._doc.userName);
+              localStorage.setItem("password", data._doc.password);
+              localStorage.setItem("type", data._doc.type);
 
               this.props.history.push("/")
             }

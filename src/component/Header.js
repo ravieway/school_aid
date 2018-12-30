@@ -4,7 +4,6 @@ class Header extends Component {
 
   constructor(props){
     super(props);
-
     this.state = {
       userName: localStorage.getItem("userName") || "",
       password: localStorage.getItem("password") || "",
