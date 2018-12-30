@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom"
+import Axios from 'axios';
+import { LOGIN_API } from '../constants';
 
 class LoginForm extends Component {
 
@@ -28,11 +30,18 @@ class LoginForm extends Component {
       submituserRegistrationForm(e) {
         e.preventDefault();
         if (this.validateForm()) {
+          Axios.post(LOGIN_API, this.state.fields).then(res => {
+            console.log(res.body);
+          }).catch(err => {
+            console.log(err)
+          });
+
             let fields = {};
             fields["username"] = "";
             fields["password"] = "";
             this.setState({fields:fields});
-            alert("Logged!");
+            // alert("Logged!");
+            
         }
   
       }
