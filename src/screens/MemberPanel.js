@@ -16,6 +16,12 @@ class MemberPanel extends Component {
     }
   }
 
+  changeActive = (type) => {
+    this.setState({
+      active: type
+    })
+  }
+
   componentWillMount(){
     Axios.post(USER_LIST, {userName: localStorage.getItem("userName"), password: localStorage.getItem("password"), type: localStorage.getItem("type")}).then(res => {
       this.setState({
@@ -32,6 +38,7 @@ class MemberPanel extends Component {
 
   renderBoards = () => {
     if(this.state.active === "view_causes"){
+      console.log(this.state.causes);
       return <CauseTable causes={this.state.causes}/>
     }else if(this.state.active === "add_causes"){
       return <AddCauses/>
@@ -50,13 +57,13 @@ class MemberPanel extends Component {
             <div className="row"  >
               <div className="col-sm-1 col-md-2 sidebar" >
                 <ul className="nav nav-sidebar">
-                  <li className="active" >
-                    <a href="#">
+                <li onClick={() => this.changeActive("view_causes")} className={this.state.active === "view_causes" ? "active" : ""} >
+                    <a>
                       View Causes <span className="sr-only">(current)</span>
                     </a>
                   </li>
-                  <li>
-                    <a href="#">Add Cause</a>
+                  <li onClick={() => this.changeActive("add_causes")} className={this.state.active === "add_causes" ? "active" : ""}>
+                    <a >Add Cause</a>
                   </li>
                   <li>
                     <a href="#">Donation Requests</a>
@@ -66,7 +73,7 @@ class MemberPanel extends Component {
               <div className="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 className="page-header">Member Dashboard</h1>
 
-                <CauseTable/>
+                {this.renderBoards(this.state.active)}
  
               </div>
             </div>
