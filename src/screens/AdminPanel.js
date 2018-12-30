@@ -2,16 +2,17 @@ import React, { Component } from "react";
 import Header from "../component/Header";
 import CauseTable from "../component/CauseTable";
 import MemberTable from "../component/MemberTable";
+import AddCauses from "../component/AddCauses";
 
 class AdminPanel extends Component {
   render() {
     return (
       <div>
-          <div>
+          <div className="navbarmod">
               <Header/>
           </div>
 
-        <div >
+        <div style={{paddingTop : 65}}>
           <div className="container-fluid">
             <div className="row"  >
               <div className="col-sm-1 col-md-2 sidebar" >

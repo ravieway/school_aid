@@ -1107,3 +1107,17 @@ form input {
     border-right: 1px solid #eee;
   }
 }
+
+
+.boxborder {
+    width: 530px;
+    padding-left: 10px;
+    border: 1px solid rgb(175, 175, 175) ;
+    margin: 0;
+  }
+
+  .navbarmod{
+    position: fixed;
+    width:100%;
+    opacity: 1;
+  }

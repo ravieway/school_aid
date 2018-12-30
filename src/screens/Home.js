@@ -13,7 +13,7 @@ class Home extends Component {
           <Header />
         </div>
 
-        <div>
+        <div className="mod">
           <OwlCarousal />
         </div>
 

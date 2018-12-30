@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CauseCard from "../component/CauseCard";
+import AddCauses from "../component/AddCauses";
 
 
 class CauseTable extends Component {
