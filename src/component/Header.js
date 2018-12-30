@@ -26,6 +26,24 @@ class Header extends Component {
 
                   <div className="col-sm-6 col-xs-12 text-right">
                     <ul className="list-unstyled list-inline header-social">
+                    <li>
+                        {" "}
+                        <a href="#">
+                          {" "}
+                          <div>
+                            <h6>Admin Panel</h6>
+                          </div>{" "}
+                        </a>{" "}
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="#">
+                          {" "}
+                          <div>
+                            <h6>Member Panel</h6>
+                          </div>{" "}
+                        </a>{" "}
+                      </li>
                       <li>
                         {" "}
                         <a href="#">
