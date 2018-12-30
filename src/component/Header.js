@@ -28,7 +28,7 @@ class Header extends Component {
                     <ul className="list-unstyled list-inline header-social">
                     <li>
                         {" "}
-                        <a href="#">
+                        <a href="/AdminPanel">
                           {" "}
                           <div>
                             <h6>Admin Panel</h6>
@@ -37,7 +37,7 @@ class Header extends Component {
                       </li>
                       <li>
                         {" "}
-                        <a href="#">
+                        <a href="/MemberPanel">
                           {" "}
                           <div>
                             <h6>Member Panel</h6>
@@ -46,7 +46,7 @@ class Header extends Component {
                       </li>
                       <li>
                         {" "}
-                        <a href="#">
+                        <a href="/Login">
                           {" "}
                           <div>
                             <h6>Log in</h6>
