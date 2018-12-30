@@ -26,9 +26,27 @@ class Header extends Component {
 
                   <div className="col-sm-6 col-xs-12 text-right">
                     <ul className="list-unstyled list-inline header-social">
+                    <li>
+                        {" "}
+                        <a href="/AdminPanel">
+                          {" "}
+                          <div>
+                            <h6>Admin Panel</h6>
+                          </div>{" "}
+                        </a>{" "}
+                      </li>
                       <li>
                         {" "}
-                        <a href="#">
+                        <a href="/MemberPanel">
+                          {" "}
+                          <div>
+                            <h6>Member Panel</h6>
+                          </div>{" "}
+                        </a>{" "}
+                      </li>
+                      <li>
+                        {" "}
+                        <a href="/Login">
                           {" "}
                           <div>
                             <h6>Log in</h6>
@@ -110,7 +128,7 @@ class Header extends Component {
                       <a href="/SuccessStories">SUCCESS STORIES</a>
                     </li>
                     <li>
-                      <a href="/ContactUs">CONTACT US</a>
+                      <a href="/Contact">CONTACT US</a>
                     </li>
                   </ul>
                 </div>

@@ -5,86 +5,86 @@ class HomeBody extends Component {
     return (
 <div>
     <div>
-    <div class="section-home about-us fadeIn animated">
+    <div className="section-home about-us fadeIn animated">
       
-      <div class="container">
+      <div className="container">
       
-          <div class="row">
+          <div className="row">
       
-              <div class="col-md-3 col-sm-6">
+              <div className="col-md-3 col-sm-6">
               
-                <div class="about-us-col">
+                <div className="about-us-col">
       
-                      <div class="col-icon-wrapper">
+                      <div className="col-icon-wrapper">
                         <img src="assets/images/icons/our-mission-icon.png" alt=""/>
                       </div>
-                      <h3 class="col-title">our mission</h3>
-                      <div class="col-details">
+                      <h3 className="col-title">our mission</h3>
+                      <div className="col-details">
       
                         <p>Identify potential donor assistance to improve facilities of underdeveloped schools in Sri Lanka</p>
                         
                       </div>
-                      <a href="#" class="btn btn-primary"> Read more </a>
+                      <a href="/About" className="btn btn-primary"> Read more </a>
                   
                 </div>
                 
               </div>
       
       
-              <div class="col-md-3 col-sm-6">
+              <div className="col-md-3 col-sm-6">
               
-                <div class="about-us-col">
+                <div className="about-us-col">
       
-                      <div class="col-icon-wrapper">
+                      <div className="col-icon-wrapper">
                         <img src="assets/images/icons/donation-icon.png" alt=""/>
                       </div>
-                      <h3 class="col-title">Make donations</h3>
-                      <div class="col-details">
+                      <h3 className="col-title">Make donations</h3>
+                      <div className="col-details">
       
                         <p>Donate now to contribute to funds that support children who live in poverty.</p>
                         
                       </div>
-                      <a href="#" class="btn btn-primary"> Donate Now </a>
+                      <a href="#" className="btn btn-primary"> Donate Now </a>
                   
                 </div>
                 
               </div>
       
       
-              <div class="col-md-3 col-sm-6">
+              <div className="col-md-3 col-sm-6">
               
-                <div class="about-us-col">
+                <div className="about-us-col">
       
-                      <div class="col-icon-wrapper">
+                      <div className="col-icon-wrapper">
                         <img src="assets/images/icons/success-icon.png" alt=""/>
                       </div>
-                      <h3 class="col-title">success stories</h3>
-                      <div class="col-details">
+                      <h3 className="col-title">success stories</h3>
+                      <div className="col-details">
       
                         <p>Real stories from the schools we serve and the corporations who make our work possible.</p>
                         
                       </div>
-                      <a href="#" class="btn btn-primary"> Read more </a>
+                      <a href="/SuccessStories" className="btn btn-primary"> Read more </a>
                   
                 </div>
                 
               </div>
       
       
-              <div class="col-md-3 col-sm-6">
+              <div className="col-md-3 col-sm-6">
               
-                <div class="about-us-col">
+                <div className="about-us-col">
       
-                      <div class="col-icon-wrapper">
+                      <div className="col-icon-wrapper">
                         <img src="assets/images/icons/help-icon.png" alt=""/>
                       </div>
-                      <h3 class="col-title">help and support</h3>
-                      <div class="col-details">
+                      <h3 className="col-title">help and support</h3>
+                      <div className="col-details">
       
                         <p>Feed us with your valueble ideas and ways you can support us</p>
                         
                       </div>
-                      <a href="#" class="btn btn-primary"> Contact Us </a>
+                      <a href="/Contact" className="btn btn-primary"> Contact Us </a>
                   
                 </div>
                 
@@ -98,26 +98,26 @@ class HomeBody extends Component {
       
       </div> 
       
-      <div class="section-home home-reasons">
+      <div className="section-home home-reasons">
       
-      <div class="container">
+      <div className="container">
       
-          <div class="row">
+          <div className="row">
               
-              <div class="col-md-6">
+              <div className="col-md-6">
       
-                  <div class="reasons-col animate-onscroll fadeIn">
+                  <div className="reasons-col animate-onscroll fadeIn">
       
                       <img src="assets/images/reasons/we-fight-togother.jpg" alt=""/>
       
-                      <div class="reasons-titles">
+                      <div className="reasons-titles">
       
-                          <h3 class="reasons-title">We rise together</h3>
-                          <h5 class="reason-subtitle">Lets help them rise</h5>
+                          <h3 className="reasons-title">We rise together</h3>
+                          <h5 className="reason-subtitle">Lets help them rise</h5>
                           
                       </div>
       
-                      <div class="on-hover hidden-xs">
+                      <div className="on-hover hidden-xs">
                           
                               <p> A good quality education helps children reach their full potential; however, for millions of children and youth in low-income countries, it is beyond reach. Although more children around the world are going to school than ever before, many are not learning basic skills like reading once they get there.</p>
       
@@ -132,20 +132,20 @@ class HomeBody extends Component {
               </div>
       
       
-              <div class="col-md-6">
+              <div className="col-md-6">
       
-                  <div class="reasons-col animate-onscroll fadeIn">
+                  <div className="reasons-col animate-onscroll fadeIn">
       
                       <img src="assets/images/reasons/we-care-about.jpg" alt=""/>
       
-                      <div class="reasons-titles">
+                      <div className="reasons-titles">
       
-                          <h3 class="reasons-title">WE care about others</h3>
-                          <h5 class="reason-subtitle">We are humans</h5>
+                          <h3 className="reasons-title">WE care about others</h3>
+                          <h5 className="reason-subtitle">We are humans</h5>
                           
                       </div>
       
-                      <div class="on-hover hidden-xs">
+                      <div className="on-hover hidden-xs">
                           
                               <p>  To really change the world, we have to help people change the way see things. Global betterment is a mental process, not one that requires huge sums of money or a high level of authority. Change has to be psychological. So if you want to see real change, stay persistent in educating humanity on how similar we all are than different. </p>
       
@@ -171,13 +171,13 @@ class HomeBody extends Component {
       </div> 
     </div>
 
-      <div class="section-home our-sponsors animate-onscroll fadeIn">
-        <div class="container">
-          <h2 class="title-style-1">
-            Our Sponsors <span class="title-under" />
+      <div className="section-home our-sponsors animate-onscroll fadeIn">
+        <div className="container">
+          <h2 className="title-style-1">
+            Our Sponsors <span className="title-under" />
           </h2>
 
-          <ul class="owl-carousel list-unstyled list-sponsors">
+          <ul className="owl-carousel list-unstyled list-sponsors">
             <li>
               {" "}
               <img src="assets/images/sponsors/logo 1.png" alt="" />
